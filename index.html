@@ -18,8 +18,6 @@
         
         function game(){
             
-
-
             // Player1 
             let option1 = prompt("Your move Player1 : ");
             let player1_move = option1.toUpperCase();
@@ -33,7 +31,7 @@
             let player2_move = option2[x];
             console.log("Player 2 : "+player2_move)
 
-
+            //Logic of the game over here
             if(player1_move === "ROCK" && player2_move === "SCISSOR"){
                 console.log("Player1 wins!");
                 player1_points++;
@@ -71,12 +69,16 @@
             }
             
         }
-        
+
+        //for playing the game for the five rounds straight
         for(let i = 0;i<5;i++){
             game();
             console.log("\n");
         }
         console.log("\n")
+
+        //Winner LOGIC
+        //it declares the result at the end of 5 rounds
         console.log("Player 1: "+player1_points + " points")
         console.log("Player 2: "+player2_points + " points")
 
